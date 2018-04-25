@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Form Exercise</title>
+</head>
+
+<body>
+
+    <h1>Log In Form</h1>
+    <form action="sign-in-url" method="POST">
+        <input type="text" placeholder="username">
+        <input type="password" placeholder="password">
+        <input type="submit">
+    </form>
+    <!-- action to the link where to send data -->
+    <!-- method is how to request. Eg. post or get -->
+    <div>
+        <h1>Sending Data to wikipedia</h1>
+        <form action="https://en.wikipedia.org" method="POST">
+            <input type="text" placeholder="name">
+            <input type="password" placeholder="password">
+            <input type="submit">
+        </form>
+    </div>
+
+    <div>
+        <!-- This is the example of checking the username and password info by using name attribute. -->
+        <h1>Check the username and password</h1>
+        <form>
+            <input type="text" placeholder="username" name="username">
+            <input type="password" placeholder="password" name="userpassword">
+            <input type="submit">
+        </form>
+    </div>
+
+    <div>
+        <h1>Form Using the Label</h1>
+        <form>
+            <!-- linking label and input field with 'for' and 'id' -->
+            <label for="username"> Username: </label>
+            <input id="username" type="text" placeholder="username">
+            <label for="password"> Password </label>
+            <input id="password" type="password" placeholder="password">
+            <input type="submit">
+        </form>
+    </div>
+
+    <div>
+        <!-- putting 'required' attribute in input level -->
+        <h1>Form Validation</h1>
+        <form>
+            <!-- linking label and input field with 'for' and 'id' -->
+            <label for="username"> Username: </label>
+            <input id="username" type="text" placeholder="username" required>
+            <label for="password"> Password </label>
+            <input id="password" type="password" placeholder="password" required>
+            <label for="email"> Email:</label>
+            <input id="email" type="email" placeholder="email" required>
+            <input type="submit">
+        </form>
+    </div>
+
+    <h1>Registeration Form exercise below</h1>
+
+    <div>
+
+        <form>
+            <div>
+                <label for="firstname">First Name:</label>
+                <input name="first" type="text" placeholder="firstname" id="firstname" required>
+                <label for="lastname">Last Name:</label>
+                <input name='last' type="text" placeholder="lastname" id="lastname" required>
+            </div>
+            <div>
+                <label for="male">Male:</label>
+                <input type="radio" id="male" value="male" name="gender">
+                <label for="female">Female:</label>
+                <input type="radio" id="female" value="female" name="gender">
+                <label for="other">Other:</label>
+                <input type="radio" id="other" value="other" name="gender">
+            </div>
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" required id="email">
+                <label for="password">Password:</label>
+                <input type="password" required id="password" pattern=".{5,10}" title="5 to 10 characters">
+            </div>
+            <div>
+                <label for="birthday">Birthday:</label>
+                <select name="day" id="day">
+                    <option value="day">Day</option>
+                    <option value="day">Sunday</option>
+                    <option value="day">Monday</option>
+                    <option value="day">Tuesday</option>
+                    <option value="day">Wednesday</option>
+                </select>
+                <select name="month" id="month">
+                    <option value="day">Month</option>
+                    <option value="month">Jan</option>
+                    <option value="month">Fab</option>
+                    <option value="month">March</option>
+                    <option value="month">April</option>
+                </select>
+                <select name="year" id="year">
+                    <option value="day">Year</option>
+                    <option value="year">2018</option>
+                    <option value="year">2017</option>
+                    <option value="year">2016</option>
+                    <option value="year">2015</option>
+                </select>
+            </div>
+            <div>
+                <label for="agreed'">I agree to terms and conditions:</label>
+                <input type="checkbox" id="agreed" name='agreed' required>
+            </div>
+            <button>Submit</button>
+        </form>
+
+    </div>
+</body>
+
+</html>
